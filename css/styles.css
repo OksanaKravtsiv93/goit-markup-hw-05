@@ -117,6 +117,7 @@ ul {
 }
 
 .list-nav-menu {
+    position: relative;
     display: flex;
     gap: 40px;
 }
@@ -130,6 +131,19 @@ ul {
     color: var(--color-brand);
     text-decoration: none;
     padding: 24px 0px;
+    position: relative;
+ }
+
+ .nav-menu-item.current::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-secondary-dark);
+    border-radius: 2px;
  }
 
 .nav-menu-item:hover {
@@ -143,6 +157,8 @@ ul {
  .nav-menu-item:last-child {
     margin-right: 0;
  }
+
+
 
  .page-adress {
     display: flex;
@@ -633,4 +649,138 @@ ul {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.portfolio-overlay-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-secondary);
+    transform: translateY(100%);
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+
+  .portfolio-card-link:hover .overlay,
+  .portfolio-card-link:focus .overlay {
+    transform: translateY(0);
+  }
+  
+  /* BACKDROP */
+
+  .backdrop .is-hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .backdrop {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* MODAL */
+  .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 576px;
+  background: #FCFCFC;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  }
+  
+  .modal-close-btn {
+    position: absolute;
+    display: flex;
+    top: 24px;
+    right: 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary-inverted);
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  .modal-close-btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    fill: #000;
+}
+  
+  /* MODAL WINDOW HOVER EFFECTS */
+  .modal-close-btn:hover .modal-close-btn-icon,
+  .modal-close-btn:focus .modal-close-btn-icon {
+    cursor: pointer;
+    fill: var(--color-background);
+  }
+  
+  .modal-close-btn:hover,
+  .modal-close-btn:focus {
+    border-color: var(--color-brand);
+    background-color: var(--color-background);
+  }
+  
+  /* ANIMATIONS / TRANSITIONS */
+  .animation-links:hover {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+  
+  .animation-hero-btn {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+  
+  .animation-customers {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+  
+  .animation-social {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+  
+  .animation-modal-close-btn {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+  
+  
+  .animation-filter-btn {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1);
+  }
+  
+  .animation-backdrop {
+    transition: transform 250ms;
+    transition-timing-function: (0.4, 0, 0.2, 1); 
+  }
+  
 
