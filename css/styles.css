@@ -146,6 +146,10 @@ ul {
     border-radius: 2px;
  }
 
+ .current {
+    color: var(--color-secondary-dark)
+ }
+
 .nav-menu-item:hover {
     color: var(--color-secondary);
 }
@@ -262,7 +266,7 @@ ul {
     background: var(--color-secondary);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px; 
-    border: 1px solid var(--color-brand);
+    border: 1px solid var(--color-secondary);
     letter-spacing: (var(--letter-spacing-secondary));
     cursor: pointer;
     padding: 16px 32px;
@@ -747,45 +751,50 @@ ul {
   
   .modal-close-btn:hover,
   .modal-close-btn:focus {
-    border-color: var(--color-brand);
-    background-color: var(--color-background);
+    border-color: var(--color-secondary-dark);
+    background-color: var(--color-secondary-dark);
   }
   
   /* ANIMATIONS / TRANSITIONS */
-  .animation-links:hover {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .animation-links {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .animation-hero-btn {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .animation-customers {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .animation-social {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
   }
   
   .animation-modal-close-btn {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
+  .animation-decor-btn {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   
-  .animation-filter-btn {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .animation-portfolio-btn {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+  
+  .animation-portfolio-card-link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+  .animation-overlay {
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .animation-backdrop {
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
 
+  .animation-social {
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  
